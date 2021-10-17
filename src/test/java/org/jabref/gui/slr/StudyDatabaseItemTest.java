@@ -53,4 +53,11 @@ public class StudyDatabaseItemTest {
         assertFalse(item.equals(o));
     }
 
+    @Test
+    public void equalsNoNameThisTest() {
+        item.setName(null);
+        StudyDatabaseItem o = new StudyDatabaseItem("Test", true);
+        assertFalse(item.equals(o));
+    }
+
 }
